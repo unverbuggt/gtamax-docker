@@ -1,0 +1,213 @@
+services:
+  dosbox-gtamax1:
+    image: lscr.io/linuxserver/dosbox-staging:latest
+    container_name: dosbox-gtamax1
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - SUBFOLDER=/gtamax1/
+      - TITLE=GTAMAX1
+      - SELKIES_UI_TITLE=GTAMAX1
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=de_DE.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=640
+      - SELKIES_MANUAL_HEIGHT=480
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config1:/config
+      - ./game:/game
+      - ./game1/GTA1-MAX/GTADATA/PLAYER_A.DAT:/game/GTA1-MAX/GTADATA/PLAYER_A.DAT
+      - ./game1/GTA1-MAX/GTADATA/REPLAY.REP:/game/GTA1-MAX/GTADATA/REPLAY.REP
+      - ./game1/GTA1-MAX/GTADATA/UK/PLAYER_A.DAT:/game/GTA1-MAX/GTADATA/UK/PLAYER_A.DAT
+      - ./game1/GTA1-MAX/GTADATA/UK/PLAYER_E.DAT:/game/GTA1-MAX/GTADATA/UK/PLAYER_E.DAT
+    ports:
+      - 3011:3000
+      - 3001:3001
+    shm_size: "1gb"
+  dosbox-gtamax2:
+    image: lscr.io/linuxserver/dosbox-staging:latest
+    container_name: dosbox-gtamax2
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - SUBFOLDER=/gtamax2/
+      - TITLE=GTAMAX2
+      - SELKIES_UI_TITLE=GTAMAX2
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=de_DE.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=640
+      - SELKIES_MANUAL_HEIGHT=480
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config2:/config
+      - ./game:/game
+      - ./game2/GTA1-MAX/GTADATA/PLAYER_A.DAT:/game/GTA1-MAX/GTADATA/PLAYER_A.DAT
+      - ./game2/GTA1-MAX/GTADATA/REPLAY.REP:/game/GTA1-MAX/GTADATA/REPLAY.REP
+      - ./game2/GTA1-MAX/GTADATA/UK/PLAYER_A.DAT:/game/GTA1-MAX/GTADATA/UK/PLAYER_A.DAT
+      - ./game2/GTA1-MAX/GTADATA/UK/PLAYER_E.DAT:/game/GTA1-MAX/GTADATA/UK/PLAYER_E.DAT
+    ports:
+      - 3012:3000
+      - 3002:3001
+    shm_size: "1gb"
+  dosbox-gtamax3:
+    image: lscr.io/linuxserver/dosbox-staging:latest
+    container_name: dosbox-gtamax3
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - SUBFOLDER=/gtamax3/
+      - TITLE=GTAMAX3
+      - SELKIES_UI_TITLE=GTAMAX3
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=de_DE.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=640
+      - SELKIES_MANUAL_HEIGHT=480
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config3:/config
+      - ./game:/game
+      - ./game3/GTA1-MAX/GTADATA/PLAYER_A.DAT:/game/GTA1-MAX/GTADATA/PLAYER_A.DAT
+      - ./game3/GTA1-MAX/GTADATA/REPLAY.REP:/game/GTA1-MAX/GTADATA/REPLAY.REP
+      - ./game3/GTA1-MAX/GTADATA/UK/PLAYER_A.DAT:/game/GTA1-MAX/GTADATA/UK/PLAYER_A.DAT
+      - ./game3/GTA1-MAX/GTADATA/UK/PLAYER_E.DAT:/game/GTA1-MAX/GTADATA/UK/PLAYER_E.DAT
+    ports:
+      - 3013:3000
+      - 3003:3001
+    shm_size: "1gb"
+  dosbox-gtamax4:
+    image: lscr.io/linuxserver/dosbox-staging:latest
+    container_name: dosbox-gtamax4
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - SUBFOLDER=/gtamax4/
+      - TITLE=GTAMAX4
+      - SELKIES_UI_TITLE=GTAMAX4
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=de_DE.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=640
+      - SELKIES_MANUAL_HEIGHT=480
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config4:/config
+      - ./game:/game
+      - ./game4/GTA1-MAX/GTADATA/PLAYER_A.DAT:/game/GTA1-MAX/GTADATA/PLAYER_A.DAT
+      - ./game4/GTA1-MAX/GTADATA/REPLAY.REP:/game/GTA1-MAX/GTADATA/REPLAY.REP
+      - ./game4/GTA1-MAX/GTADATA/UK/PLAYER_A.DAT:/game/GTA1-MAX/GTADATA/UK/PLAYER_A.DAT
+      - ./game4/GTA1-MAX/GTADATA/UK/PLAYER_E.DAT:/game/GTA1-MAX/GTADATA/UK/PLAYER_E.DAT
+    ports:
+      - 3014:3000
+      - 3004:3001
+    shm_size: "1gb"
